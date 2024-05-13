@@ -81,7 +81,7 @@ span {
 
 aside {
   position: fixed;
-  width: 20rem;
+  width: 15rem;
   background-color: #fff;
   height: calc(100svh - 200px);
   padding: 4rem 2rem;
@@ -128,17 +128,17 @@ aside::-webkit-scrollbar {
   font-size: 1rem;
 }
 main {
-  margin-left: 25rem;
+  margin-left: 18.5rem;
   padding: 2rem;
   background-color: var(--primary-5);
   overflow-y: auto;
 }
 
 main h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--primary-2);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .account-info-container {
   display: flex;
@@ -166,6 +166,8 @@ main h2 {
 
 .account-info-container .info > * {
   margin-bottom: 0.7rem !important;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 .table-container {
   width: 100%;
@@ -182,19 +184,21 @@ table {
 table th span {
   text-align: center;
   margin-right: 0.4rem;
+  font-size: 0.7rem;
 }
 table th {
   color: #213f7d;
   padding: 1rem 0;
   text-transform: uppercase;
-  font-size: 1rem;
   padding-right: 1rem;
 }
-
+table th img {
+  width: 0.6rem;
+}
 table td {
   text-align: center;
   border-bottom: 1px solid #213f7d0f;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 table button {
   border: none;
