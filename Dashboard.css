@@ -1,0 +1,256 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100svh;
+  min-height: 100svh;
+  width: 100%;
+  /* overflow: hidden; */
+}
+:root {
+  --primary-1: #39cdcc;
+  --primary-2: #213f7d;
+  --primary-3: #545f7d;
+  --primary-4: rgb(253, 253, 253);
+  --primary-5: #fbfbfb;
+}
+
+.container {
+  background-color: var(--primary-5);
+  height: 100%;
+}
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 4rem;
+  align-items: center;
+  border: 2px solid #545f7d26;
+  z-index: 100rem;
+}
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+nav .left .input-container {
+  position: relative;
+}
+nav .left .input-container input {
+  width: 23rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #213f7d;
+  opacity: 30%;
+  padding-left: 1rem;
+}
+nav .left .input-container input:focus {
+  outline: none;
+}
+nav .left .input-container span {
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  background-color: var(--primary-1);
+  height: 100%;
+  border-radius: 0px 8px 8px 0;
+  text-align: center;
+}
+
+nav .left .input-container span img {
+  margin-top: 0.7rem;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.right a,
+span {
+  color: var(--primary-3);
+  font-size: 1.2rem;
+}
+
+/* sidebar */
+
+aside {
+  position: fixed;
+  width: 20rem;
+  background-color: #fff;
+  height: calc(100svh - 200px);
+  padding: 4rem 2rem;
+  overflow: auto;
+}
+aside::-webkit-scrollbar {
+  width: 10px;
+  background-color: whitesmoke;
+}
+
+.organization img,
+.organization span {
+  margin-right: 0.7rem;
+  font-weight: 400;
+}
+.organization {
+  margin-bottom: 2.5rem;
+  display: flex;
+}
+.dashboard,
+.categories h3,
+.categories ul li {
+  display: flex;
+  gap: 1rem;
+}
+.categories {
+  margin-top: 2.5rem;
+}
+
+.categories ul,
+.categories ul li,
+.categories h3 {
+  margin-bottom: 1.2rem;
+}
+.categories h3 {
+  color: var(--primary-3);
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 14.08px;
+}
+.categories ul li span {
+  color: var(--primary-2);
+  font-weight: 400;
+  font-size: 1rem;
+}
+main {
+  margin-left: 25rem;
+  padding: 2rem;
+  background-color: var(--primary-5);
+  overflow-y: auto;
+}
+
+main h2 {
+  margin-bottom: 2rem;
+  color: var(--primary-2);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.account-info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: auto;
+  padding: 1rem 0;
+}
+.account-info-container::-webkit-scrollbar {
+  width: 0;
+}
+.account-info-container .info {
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid #213f7d0f;
+  border-radius: 5px;
+  padding: 1rem 5rem;
+}
+.account-info-container .info img {
+  margin: 0 auto;
+}
+
+.account-info-container .info > * {
+  margin-bottom: 0.7rem !important;
+}
+.table-container {
+  width: 100%;
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border: 1px solid #213f7d0f;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+table th span {
+  text-align: center;
+  margin-right: 0.4rem;
+}
+table th {
+  color: #213f7d;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+table td {
+  text-align: center;
+  border-bottom: 1px solid #213f7d0f;
+  padding: 1rem 0;
+}
+table button {
+  border: none;
+  background-color: #d6d9e4;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: var(--primary-3);
+}
+.filter {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.filter select {
+  background-color: #9097aa;
+  border: none;
+  padding: 0.2rem 1rem;
+  color: var(--primary-5);
+  border-radius: 5px;
+}
+@media screen and (max-width: 980px) {
+}
+@media screen and (max-width: 980px) {
+  aside {
+    display: none;
+  }
+
+  nav .left .input-container,
+  .right a,
+  .right span {
+    display: none;
+  }
+  nav {
+    padding: 0 2rem;
+  }
+  nav .logo {
+    width: 8rem;
+  }
+  .right {
+    gap: 0.7rem;
+  }
+  .right .avater {
+    width: 2rem;
+  }
+  main {
+    margin-left: 0;
+    z-index: -100rem;
+    padding: 2rem;
+  }
+  main h2 {
+    margin-bottom: 1rem;
+  }
+  .account-info-container .info p {
+    font-size: 0.6rem;
+  }
+  table th img {
+    display: none;
+  }
+}

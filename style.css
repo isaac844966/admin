@@ -1,0 +1,110 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primary-1: #39cdcc;
+  --primary-2: #213f7d;
+  --primary-3: #545f7d;
+  --primary-4: rgb(253, 253, 253);
+}
+html,
+body {
+  height: 100svh;
+}
+.login-container {
+  display: flex;
+  height: 100%;
+}
+.login-img-container {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .login-img-container {
+    width: 100%;
+    background-color: var(--primary-4);
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+  }
+  .login-img-container .logo {
+    margin-bottom: 5rem;
+  }
+  .login-img-container > img {
+    width: 100%;
+    height: 21rem;
+  }
+}
+
+.login-form-container {
+  width: 100%;
+  height: 100%;
+}
+.login-form-container .form {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+.login-form-container .form h1 {
+  color: var(--primary-2);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.login-form-container .form p {
+  font-size: 1.2rem;
+  color: var(--primary-3);
+  margin-bottom: 2.5rem;
+  text-decoration: none;
+}
+.login-form-container .form input {
+  width: 27.9rem;
+  height: 3rem;
+  border: 2px solid #545f7d26;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+.login-form-container .form input::placeholder {
+  color: var(--primary-3);
+  font-size: 14px;
+}
+.login-form-container .form input:focus {
+  outline: none;
+}
+.login-form-container .form .password {
+  position: relative;
+}
+.login-form-container .form .password span {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--primary-1);
+  font-size: 0.7rem;
+}
+.login-form-container .form a {
+  margin-bottom: 2.5rem;
+  text-decoration: none;
+  color: var(--primary-1);
+}
+.login-form-container .form button {
+  background-color: var(--primary-1);
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 520px) {
+  .login-form-container .form input {
+    width: 17.9rem;
+  }
+}

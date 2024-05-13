@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lendsgr</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.svg" type="image/svg" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-img-container">
+        <div class="logo">
+          <img src="logo.svg" alt="" />
+        </div>
+        <img src="sign-in.svg" alt="login-img" />
+      </div>
+      <div class="login-form-container">
+        <div class="form">
+          <h1>Welcome</h1>
+          <p>Enter details to login</p>
+          <form onsubmit="submitForm(event)" method="POST">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <div class="password">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <span>SHOW</span>
+            </div>
+            <a href="#">Forget Password?</a><br />
+            <button type="submit" class="btn">LOG IN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
