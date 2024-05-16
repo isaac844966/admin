@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 ::after,
 ::before {
@@ -8,6 +9,8 @@ html,
 body {
   height: 100svh;
   width: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 :root {
   --primary-1: #39cdcc;
