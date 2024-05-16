@@ -76,9 +76,12 @@ nav .left .input-container span img {
   gap: 0.7rem;
 }
 .right a,
-span {
+.profile {
   color: var(--primary-3);
   font-size: 1.2rem;
+}
+.right .menu {
+  display: none;
 }
 /* end of navabr */
 /* sidebar */
@@ -138,7 +141,7 @@ aside::-webkit-scrollbar {
 main {
   margin-top: 6rem;
   margin-left: 18.5rem;
-  padding: 2rem;
+  padding: 3rem;
   background-color: var(--primary-5);
 }
 
@@ -184,7 +187,7 @@ table {
   width: 100%;
   border: 1px solid #213f7d0f;
   box-shadow: 3px 5px 20px 0px #0000000a;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   padding: 1rem;
 }
 
@@ -214,10 +217,36 @@ table button {
   border-radius: 8px;
   color: var(--primary-3);
 }
+table .pending {
+  color: #e9b200;
+  background-color: #f0dfa9;
+}
+table .Blacklisted {
+  color: #e4033b;
+  background-color: #f5ccd6;
+}
+table .active {
+  color: #39cd62;
+  background-color: #cdf8d9;
+}
+.filter-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.filter-pagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.material-symbols-outlined {
+  background-color: #bfc4cf;
+  border-radius: 0.2rem;
+}
 .filter {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
 }
 .filter select {
   background-color: #9097aa;
@@ -226,33 +255,30 @@ table button {
   color: var(--primary-5);
   border-radius: 5px;
 }
-@media screen and (max-width: 980px) {
-}
+
 @media screen and (max-width: 980px) {
   aside {
     display: none;
   }
-
+  .right .menu {
+    display: block;
+    font-size: 2rem;
+    color: black;
+    background-color: transparent;
+  }
   nav .left .input-container,
   .right a,
-  .right span {
+  .right .profile {
     display: none;
-  }
-  nav {
-    padding: 0 2rem;
   }
   nav .logo {
     width: 8rem;
-  }
-  .right {
-    /* gap: 0.7rem; */
   }
   .right .avater {
     width: 2rem;
   }
   main {
     margin-left: 0;
-    z-index: -100rem;
     padding: 2rem;
   }
   main h2 {
@@ -262,6 +288,9 @@ table button {
     font-size: 0.6rem;
   }
   table th img {
+    display: none;
+  }
+  .filter-pagination .pagination {
     display: none;
   }
 }
