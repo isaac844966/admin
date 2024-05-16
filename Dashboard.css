@@ -7,9 +7,7 @@
 html,
 body {
   height: 100svh;
-  min-height: 100svh;
   width: 100%;
-  /* overflow: hidden; */
 }
 :root {
   --primary-1: #39cdcc;
@@ -23,15 +21,21 @@ body {
   background-color: var(--primary-5);
   height: 100%;
 }
+/* navbar */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  height: 6rem;
-  padding: 0 4rem;
-  align-items: center;
-  border: 2px solid #545f7d26;
   z-index: 100rem;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  height: 6rem;
+  align-items: center;
+  box-shadow: 1px 1px 1px #d6d9e4;
 }
 nav .left {
   display: flex;
@@ -69,18 +73,19 @@ nav .left .input-container span img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.7rem;
 }
 .right a,
 span {
   color: var(--primary-3);
   font-size: 1.2rem;
 }
-
+/* end of navabr */
 /* sidebar */
 
 aside {
   position: fixed;
+  top: 100px;
   width: 15rem;
   background-color: #fff;
   height: calc(100svh - 200px);
@@ -127,11 +132,14 @@ aside::-webkit-scrollbar {
   font-weight: 400;
   font-size: 1rem;
 }
+/* end of sidebar */
+
+/* main container  */
 main {
+  margin-top: 6rem;
   margin-left: 18.5rem;
   padding: 2rem;
   background-color: var(--primary-5);
-  overflow-y: auto;
 }
 
 main h2 {
@@ -170,7 +178,6 @@ main h2 {
   font-weight: 700;
 }
 .table-container {
-  width: 100%;
   overflow: auto;
 }
 table {
@@ -238,7 +245,7 @@ table button {
     width: 8rem;
   }
   .right {
-    gap: 0.7rem;
+    /* gap: 0.7rem; */
   }
   .right .avater {
     width: 2rem;
